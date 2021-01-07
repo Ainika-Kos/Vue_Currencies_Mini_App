@@ -1,6 +1,6 @@
 <template>
   <div class="todoApp">
-    <h1 v-if="todo.length === 0" class="heading">
+    <h1 v-if="!todo.length" class="heading">
       You don't have any task!
     </h1>
     <h1 v-else-if="todo.length < 2" class="heading">
@@ -41,8 +41,8 @@
         <Button label="Delete task" @onClick="removeTask(task.id)" />
       </div>
     </div>
-    <p v-show="todo.length > 1" class="action-text">Actions with all tasks:</p>
-    <div v-show="todo.length > 1" class="action-wrapper">
+    <p v-show="todo.length" class="action-text">Actions with all tasks:</p>
+    <div v-show="todo.length" class="action-wrapper">
       <Button label="Remove all" @onClick="removeAllTasks()" />
       <Button label="All done" @onClick="finishAllTasks()" />
       <Button label="All active" @onClick="unFinishAllTasks()" />
@@ -55,6 +55,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+/* import flexboxgrid from 'flexboxgrid'; */
 import Button from './components/button/button.vue';
 /* import Input from './components/input/input.vue'; */
 
