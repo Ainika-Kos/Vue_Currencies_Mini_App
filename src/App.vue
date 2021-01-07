@@ -51,22 +51,25 @@
 </template>
 
 <style src="./app.scss" lang="scss" scoped></style>
+<style src="vue-flexboxgrid/dist/vue-flexboxgrid.css"/>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 import Button from './components/button/button.vue';
-// import Input from './components/input/input.vue';
+/* import Input from './components/input/input.vue'; */
 
 type Data = {
   header: string;
   newTask: string;
   showTask: 'all' | 'active' | 'done';
 };
+
 type Todo = {
   id: number;
   name: string;
   completed: boolean;
 };
+
 const Component = defineComponent({
   components: {
     Button,
