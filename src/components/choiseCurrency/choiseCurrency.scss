@@ -1,0 +1,68 @@
+.choise-currency-wrapper {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.choise-currency {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 5px;
+  margin: 10px;
+  background-color: rgba(232, 232, 232, 1);
+  border: 1px solid rgba(163, 163, 163, 1);
+  color: rgba(48, 48, 48, 1);
+  cursor: pointer;
+  min-width: 90px;
+  transition: background-color 0.2s;
+  display: flex;
+
+  &:hover {
+    background-color: rgba(211, 211, 211, 1);
+  }
+
+  &:active {
+    outline: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.activeChoise {
+  background-color: rgba(255, 255, 255, 1);
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 1);
+  }
+}
+
+.choise-currency__checkbox {
+  font-size: 12px;
+  font-weight: 500;
+  width: 18px;
+  height: 18px;
+  border: 1px solid rgba(163, 163, 163, 1);
+  border-radius: 5px;
+  color: transparent;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.red {
+  color: red;
+}
+
+.choise-currency__name {
+  margin-left: 5px;
+}

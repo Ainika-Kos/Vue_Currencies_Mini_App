@@ -1,38 +1,7 @@
 <template>
   <div class="currenciesApp">
-    <div class="show-currency-wrapper">
-      <div
-        v-for="currency in filteredCurrenciesList"
-        :key="currency.id"
-        className="show-currency"
-      >
-        {{ currency.name }}
-        <Button
-          label="X"
-          class="xButton"
-          @onClick="currency.isActive = !currency.isActive"
-        />
-      </div>
-    </div>
-    <div class="choise-currency-wrapper">
-      <div
-        v-for="currency in currencies"
-        :key="currency.id"
-        class="choise-currency"
-        :class="{ activeChoise: currency.isActive }"
-        @click="currency.isActive = !currency.isActive"
-      >
-        <span>
-          <span
-            class="choise-currency__checkbox"
-            :class="{ red: currency.isActive }"
-          >
-            X
-          </span>
-        </span>
-        <span class="choise-currency__name">{{ currency.name }}</span>
-      </div>
-    </div>
+    <ShowCurrency :currencies="filteredCurrenciesList" />
+    <ChoiseCurrency :currencies="currencies" />
   </div>
 </template>
 
@@ -40,7 +9,8 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import Button from './components/button/button.vue';
+import ShowCurrency from './components/schowCurrency/showCurrency.vue';
+import ChoiseCurrency from './components/choiseCurrency/choiseCurrency.vue';
 
 type Currency = {
   id: number;
@@ -54,7 +24,8 @@ type Data = {
 
 const Component = defineComponent({
   components: {
-    Button,
+    ShowCurrency,
+    ChoiseCurrency,
   },
   data(): Data {
     return {
