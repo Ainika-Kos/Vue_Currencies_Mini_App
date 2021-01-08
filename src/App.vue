@@ -1,7 +1,13 @@
 <template>
-  <div class="currenciesApp">
-    <ShowCurrency :currencies="filteredCurrenciesList" />
-    <ChoiseCurrency :currencies="currencies" />
+  <div class="container">
+    <div class="row center-xs">
+      <div class="col-xs-12 col-sm-6 col-md-5">
+        <div class="currenciesApp">
+          <ShowCurrency :currencies="filteredCurrenciesList" />
+          <ChoiseCurrency :currencies="currencies" />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
