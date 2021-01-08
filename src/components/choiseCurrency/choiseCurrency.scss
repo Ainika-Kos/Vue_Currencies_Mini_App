@@ -8,7 +8,7 @@
 
 .choise-currency {
   font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 500;
   text-transform: uppercase;
   text-align: left;
@@ -16,11 +16,12 @@
   margin: 10px;
   background-color: rgba(232, 232, 232, 1);
   border: 1px solid rgba(163, 163, 163, 1);
-  color: rgba(48, 48, 48, 1);
+  color: navy;
   cursor: pointer;
-  min-width: 90px;
+  min-width: 95px;
   transition: background-color 0.2s;
   display: flex;
+  align-items: center;
 
   &:hover {
     background-color: rgba(211, 211, 211, 1);
@@ -45,7 +46,7 @@
 
 .choise-currency__checkbox {
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 700;
   width: 18px;
   height: 18px;
   border: 1px solid rgba(163, 163, 163, 1);

@@ -7,7 +7,7 @@
 
 .show-currency {
   position: relative;
-  padding: 5px;
+  padding: 0 5px;
   margin: 10px;
   font-family: 'Roboto', sans-serif;
   cursor: pointer;
@@ -18,7 +18,7 @@
   border: 1px solid rgb(211, 211, 211);
   border-radius: 3px;
   transition: background-color 0.2s;
-  min-width: 90px;
+  min-width: 95px;
   min-height: 30px;
   overflow: visible;
 }
